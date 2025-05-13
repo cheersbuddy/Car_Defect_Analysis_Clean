@@ -9,6 +9,9 @@ This project introduces a fully automated image-based **defect detection system*
 - **YOLOv7** for real-time defect localization
 - **CNNs** for precise defect classification
 
+  ![image](https://github.com/user-attachments/assets/ebff126c-877d-4b33-96ad-5bf0bd04092e)
+
+
 By automating the inspection process, the system significantly reduces labor costs, inspection time, and inconsistency — improving accuracy and boosting customer satisfaction.
 
 ---
@@ -38,13 +41,27 @@ By automating the inspection process, the system significantly reduces labor cos
 ## 🔍 Sample Workflow
 
 1. **Upload an image** of a car surface via the Flask web interface
+
+   ![image](https://github.com/user-attachments/assets/8a549042-6ce4-4624-9f17-83b6dea53ede)
+
+2. The model detects regions with **scratches, dents, or paint issues**
+
+![image](https://github.com/user-attachments/assets/de8fe5ab-50ea-49da-b6d0-c60f9090d7b7)
+
    
-3. The model detects regions with **scratches, dents, or paint issues**
+4. Users can **review, validate, or download results**
    
-5. Bounding boxes are drawn and classified in real time
-   
-7. Users can **review, validate, or download results**
-   
+![image](https://github.com/user-attachments/assets/7ddab113-8012-4284-a6f4-b863dad4dbc4)
+
+![image](https://github.com/user-attachments/assets/bdb3508e-dff0-4e4e-a4a8-190419bc70be)
+
+![image](https://github.com/user-attachments/assets/663526ca-e4d8-4222-8675-06023349111e)
+
+![image](https://github.com/user-attachments/assets/b8b60863-2ced-4e0f-9781-62ced807d44d)
+
+![image](https://github.com/user-attachments/assets/c383c2ad-efb9-4d4d-b270-b50292639317)
+
+
 
 ---
 
@@ -83,12 +100,12 @@ By automating the inspection process, the system significantly reduces labor cos
 
 ## 🧪 Performance Metrics
 
-| Metric          | Score        |
-| --------------- | ------------ |
-| Precision       | 89%+         |
-| Recall          | 87%+         |
-| F1-Score        | 88%+         |
-| Detection Speed | \~25ms/image |
+| ALGORITHM                    | Score        |
+| ---------------------------- | ------------ |
+| Defect detection of runs     | 89%+         |
+| Defect detection of dirt     | 87%+         |
+| Defect Detection of Scratch  | 88%+         |
+| Detection Speed              | \~25ms/image |
 
 ---
 
