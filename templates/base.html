@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}      {% endblock %}</title>
+    <link rel="icon" href="../src/Default.jpeg">
+    <link rel="stylesheet" href="{{url_for('static',filename= 'style.css')}}">
+</head>
+<body style="background-image: url('/static/image/Default.jpg');height: 100%;  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;">
+    {% block body %}
+    
+    {% endblock %} 
+   <!-- <script src="scripts.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %} Image {% endblock %}
+
+{% block body %}
+<div class="navbar">
+    <ul>
+        <li><a href="./home">Home</a></li>
+        <li><a href="/image" class="active">Image</a></li>
+        <li><a href="/analysis">Analysis</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="left-panel">
+        <form class="form-signin" method="post" enctype="multipart/form-data" action="/image" id="uploadForm">
+            <img class="mb-4" src="/static/pytorch.png" alt="" width="72">
+            <h2>Upload Image</h2>
+            <h5>files allowed<br>.jpg , .png , .jpeg , .gif</h5>
+            <input type="file" name="file" class="form-control-file" id="inputfile" onchange="previewImage(event)"><br/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+        </form>
+    </div>
+    <div class="right-panel" id="displayPanel">
+        <div class="placeholder">
+            <div class="image-container">
+                <h3>Preview Image</h3>
+                <img id="image" src="#" alt="Preview Image">
+            </div>
+        </div>
+    </div>
+    <div class="right-panel" id="displayPanel">
+        <div class="placeholder">
+            <div class="image-container">
+                <h3>Detected Image</h3>
+                <img id="detected-image" src="#" alt="Detected Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function previewImage(event) {
+        var previewImage = document.getElementById('image');
+        previewImage.src = URL.createObjectURL(event.target.files[0]);
+        previewImage.onload = function() {
+            URL.revokeObjectURL(previewImage.src); // Free memory
+        }
+        // Reset detected image
+        document.getElementById('detected-image').src = "";
+    }
+
+    // Handle form submission with AJAX
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formData = new FormData(this);
+        fetch('/image', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('detected-image').src = data.detected_image_url;
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+
+{% endblock %}

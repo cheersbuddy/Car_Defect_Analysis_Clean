@@ -1,0 +1,56 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+ENV/
+*.egg-info/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Model weights (use LFS if needed)
+*.pt
+*.h5
+*.pkl
+*.onnx
+traced_model.pt
+yolov7_training.pt
+best.pt
+
+# YOLOv7 training outputs
+runs/
+final-year-car-paint-defect-1/
+sample_media/
+
+# Datasets, media, and large files
+*.csv
+*.zip
+*.mp4
+*.avi
+*.mov
+
+# Ignore all images by default
+*.jpg
+*.jpeg
+*.png
+
+# EXCEPTION: keep small demo/test images
+!sample_image.jpg
+!static/test_images/demo1.png
+
+# VSCode / IDE files
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
