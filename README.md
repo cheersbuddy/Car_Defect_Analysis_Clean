@@ -25,9 +25,114 @@ By automating the inspection process, the system significantly reduces labor cos
 
 ---
 
-## 📬 Contact
+## 🧠 Key Features
 
-**Sowmiya P**  
-📧 psowmiya454@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/sowmiya-p)  
-🔗 [GitHub](https://github.com/cheersbuddy)
+- ⚙️ Real-time defect detection and classification
+- 🧠 Deep learning-powered accuracy with YOLOv7 + CNN
+- 🖼️ Input via annotated car surface images
+- 📊 Output includes bounding boxes, defect types, and severity levels
+- 🌐 Flask-based web interface for easy access and testing
+
+---
+
+## 🔍 Sample Workflow
+
+1. **Upload an image** of a car surface via the Flask web interface
+   
+3. The model detects regions with **scratches, dents, or paint issues**
+   
+5. Bounding boxes are drawn and classified in real time
+   
+7. Users can **review, validate, or download results**
+   
+
+---
+
+> 📁 Note: Images and datasets have been excluded from this repo.  
+> You can [download sample files here](https://your-google-drive-link) and place them in the appropriate folder.
+
+---
+
+## 📦 Setup & Run Instructions
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/your-username/car-defect-detection.git
+   cd car-defect-detection
+````
+
+2. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the app**
+
+   ```bash
+   python app.py
+   ```
+
+4. **Open in browser**
+
+   ```
+   http://127.0.0.1:5000/
+   ```
+
+---
+
+## 🧪 Performance Metrics
+
+| Metric          | Score        |
+| --------------- | ------------ |
+| Precision       | 89%+         |
+| Recall          | 87%+         |
+| F1-Score        | 88%+         |
+| Detection Speed | \~25ms/image |
+
+---
+
+## 📁 File Structure (Minimal)
+
+```
+├── app.py
+├── main.py
+├── detect.py
+├── static/
+│   └── [UI assets]
+├── templates/
+│   └── index.html
+├── models/
+│   └── [YOLO/CNN architecture]
+├── utils/
+│   └── [helper functions]
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🧠 Tech Stack
+
+* **Languages**: Python, HTML/CSS
+* **Libraries**: PyTorch, TensorFlow, OpenCV, Flask
+* **Models**: YOLOv7, Convolutional Neural Networks (CNN)
+* **Tools**: Roboflow, Lightroom, Anaconda
+
+---
+
+## 🙌 Acknowledgements
+
+Special thanks to our mentor and the project review team for their guidance and support throughout the development of this solution.
+
+---
+
+## 🚀 Future Scope
+
+* Deployment to cloud platforms (AWS EC2 / Azure)
+* Integration with Manufacturing Execution Systems (MES)
+* Support for real-time video defect analysis
+
+---
+
+
