@@ -59,7 +59,7 @@ By automating the inspection process, the system significantly reduces labor cos
    ```bash
    git clone https://github.com/your-username/car-defect-detection.git
    cd car-defect-detection
-````
+
 
 2. **Install dependencies**
 
